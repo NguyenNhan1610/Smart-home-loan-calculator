@@ -90,6 +90,7 @@ export interface BankData {
   ltvRatio: number;
   interestRates: InterestRate[];
   youngRates?: InterestRate[];
+  youngAgeThreshold?: number; // Age threshold for young customer benefits (default: 35)
   floatingRate: number;
   floatingFormula: string;
   floatingBase: string;
@@ -104,6 +105,7 @@ export interface BankData {
   specialFeatures: string[];
   eligibility: string;
   notes: string;
+  lastUpdated?: string; // ISO date string for data currency tracking
 }
 
 // Bank data map
