@@ -1,0 +1,572 @@
+{
+  "agribank": {
+    "name": "Agribank",
+    "logo": "AB",
+    "color": "#00843D",
+    "maxLoan": 5000000000,
+    "maxTerm": 40,
+    "minAge": 18,
+    "maxAge": 35,
+    "maxGraceYears": 5,
+    "minIncome": 0,
+    "ltvRatio": 70,
+    "interestRates": [
+      { "months": 6, "rate": 5.5 },
+      { "months": 12, "rate": 6.2 },
+      { "months": 24, "rate": 6.5 }
+    ],
+    "floatingRate": 7.5,
+    "floatingFormula": "Khong cong bo cu the",
+    "floatingBase": "Lai suat huy dong",
+    "floatingSpread": 3.0,
+    "prepaymentFees": [
+      { "year": 1, "fee": 0 },
+      { "year": 2, "fee": 0 },
+      { "year": 3, "fee": 0 },
+      { "year": 4, "fee": 0 },
+      { "year": 5, "fee": 0 },
+      { "year": 6, "fee": 0 }
+    ],
+    "fees": {
+      "appraisalFeePercent": 0.1,
+      "appraisalFeeMin": 500000,
+      "appraisalFeeMax": 5000000,
+      "insuranceFeePercent": 0,
+      "notaryFeePercent": 0,
+      "registrationFee": 0,
+      "accountMaintenanceFee": 0,
+      "earlyRepaymentFeeMin": 0,
+      "disbursementFee": 0,
+      "latePaymentPenalty": 150
+    },
+    "discountConditions": {
+      "salaryAccount": { "discount": 0, "description": "Nhan luong qua Agribank" },
+      "existingCustomer": { "discount": 0, "description": "Khach hang hien huu" },
+      "collateralAtBank": { "discount": 0, "description": "TSDB tai Agribank" },
+      "lifeInsurance": { "discount": 0, "description": "Mua bao hiem nhan tho" },
+      "projectPartner": { "discount": 0, "description": "Mua nha du an lien ket" },
+      "youngCustomer": { "discount": 0, "description": "Khach hang tre <=35 tuoi" },
+      "civilServant": { "discount": 0.2, "description": "Cong chuc, vien chuc" },
+      "graceDiscount": { "discount": 0, "description": "Ap dung an han goc" },
+      "refinance": { "discount": 0, "description": "Tra no truoc han tu NH khac" },
+      "maxDiscount": 0.5
+    },
+    "collateralRequirements": {
+      "acceptFormedAsset": true,
+      "requiredDocuments": ["So do/So hong", "Hop dong mua ban", "CMND/CCCD", "Ho khau"],
+      "minCollateralRatio": 130,
+      "acceptedTypes": ["Can ho chung cu", "Nha o rieng le", "Dat o", "So tiet kiem"]
+    },
+    "incomeRequirements": {
+      "minDTI": 50,
+      "acceptedIncomeSources": ["Luong", "Kinh doanh", "Cho thue", "Dau tu"],
+      "minWorkExperience": 6,
+      "probationAccepted": false,
+      "contractTypes": ["Khong xac dinh thoi han", "Co thoi han >=12 thang"]
+    },
+    "processingTime": {
+      "approvalDays": 3,
+      "disbursementDays": 7,
+      "documentValidityDays": 30
+    },
+    "specialPrograms": [
+      {
+        "name": "Vay mua nha cho nguoi tre",
+        "description": "Danh cho KH <=35 tuoi",
+        "conditions": "Cong chuc, vien chuc, nguoi lao dong",
+        "benefits": "Lai suat uu dai, an han goc 5 nam"
+      }
+    ],
+    "specialFeatures": ["Khong phi tra truoc han", "Danh cho nguoi tre <=35 tuoi"],
+    "eligibility": "Cong chuc, vien chuc, nguoi lao dong",
+    "notes": ""
+  },
+  "shinhan": {
+    "name": "Shinhan Bank",
+    "logo": "SH",
+    "color": "#0046AD",
+    "maxLoan": 5000000000,
+    "maxTerm": 50,
+    "minAge": 18,
+    "maxAge": 35,
+    "maxGraceYears": 5,
+    "minIncome": 0,
+    "ltvRatio": 70,
+    "interestRates": [
+      { "months": 6, "rate": 4.5 },
+      { "months": 12, "rate": 6.45 },
+      { "months": 24, "rate": 6.6 },
+      { "months": 36, "rate": 6.9 }
+    ],
+    "floatingRate": 8.5,
+    "floatingFormula": "LS huy dong 12 thang + bien do",
+    "floatingBase": "Lai suat huy dong 12 thang",
+    "floatingSpread": 4.0,
+    "prepaymentFees": [
+      { "year": 1, "fee": 6 },
+      { "year": 2, "fee": 4 },
+      { "year": 3, "fee": 3 },
+      { "year": 4, "fee": 2 },
+      { "year": 5, "fee": 2 },
+      { "year": 6, "fee": 1 }
+    ],
+    "fees": {
+      "appraisalFeePercent": 0.15,
+      "appraisalFeeMin": 1000000,
+      "appraisalFeeMax": 10000000,
+      "insuranceFeePercent": 0.05,
+      "notaryFeePercent": 0,
+      "registrationFee": 0,
+      "accountMaintenanceFee": 0,
+      "earlyRepaymentFeeMin": 500000,
+      "disbursementFee": 0,
+      "latePaymentPenalty": 150
+    },
+    "discountConditions": {
+      "salaryAccount": { "discount": 0.1, "description": "Nhan luong qua Shinhan" },
+      "existingCustomer": { "discount": 0.1, "description": "Khach hang hien huu Shinhan" },
+      "collateralAtBank": { "discount": 0.2, "description": "Mua TSDB tu KH Shinhan" },
+      "lifeInsurance": { "discount": 0.1, "description": "Mua bao hiem nhan tho" },
+      "projectPartner": { "discount": 0.3, "description": "Mua nha du an lien ket" },
+      "youngCustomer": { "discount": 0.3, "description": "Khach hang tre <=35 tuoi" },
+      "civilServant": { "discount": 0, "description": "Cong chuc, vien chuc" },
+      "graceDiscount": { "discount": 0.2, "description": "Ap dung an han goc" },
+      "refinance": { "discount": 0.3, "description": "Tra no truoc han tu NH khac" },
+      "maxDiscount": 0.6
+    },
+    "collateralRequirements": {
+      "acceptFormedAsset": true,
+      "requiredDocuments": ["So do/So hong", "Hop dong mua ban", "CMND/CCCD", "Ho khau", "Xac nhan thu nhap"],
+      "minCollateralRatio": 130,
+      "acceptedTypes": ["Can ho chung cu", "Nha o rieng le", "Dat o"]
+    },
+    "incomeRequirements": {
+      "minDTI": 50,
+      "acceptedIncomeSources": ["Luong", "Kinh doanh", "Cho thue"],
+      "minWorkExperience": 6,
+      "probationAccepted": false,
+      "contractTypes": ["Khong xac dinh thoi han", "Co thoi han >=12 thang"]
+    },
+    "processingTime": {
+      "approvalDays": 2,
+      "disbursementDays": 5,
+      "documentValidityDays": 30
+    },
+    "specialPrograms": [
+      {
+        "name": "Ngoi nha mo uoc",
+        "description": "Danh cho nguoi tre tu 35 tuoi tro xuong",
+        "conditions": "So tien vay len den 5 ty dong",
+        "benefits": "Giam them 0.3%/nam, thoi han vay 50 nam, an han 60 thang"
+      }
+    ],
+    "specialFeatures": ["Thoi han vay 50 nam", "An han 60 thang", "Nhieu chiet khau lai suat"],
+    "eligibility": "Moi doi tuong",
+    "notes": "Tong muc giam lai suat toi da 0.6%/nam"
+  },
+  "mbbank": {
+    "name": "MB Bank",
+    "logo": "MB",
+    "color": "#1E4D92",
+    "maxLoan": 0,
+    "maxTerm": 35,
+    "minAge": 18,
+    "maxAge": 65,
+    "maxGraceYears": 5,
+    "minIncome": 10000000,
+    "ltvRatio": 80,
+    "interestRates": [
+      { "months": 6, "rate": 5.9 },
+      { "months": 12, "rate": 6.5 },
+      { "months": 24, "rate": 6.9 }
+    ],
+    "floatingRate": 8.0,
+    "floatingFormula": "Theo chinh sach ngan hang",
+    "floatingBase": "Lai suat co so MB",
+    "floatingSpread": 3.5,
+    "prepaymentFees": [
+      { "year": 1, "fee": 3 },
+      { "year": 2, "fee": 2 },
+      { "year": 3, "fee": 1 },
+      { "year": 4, "fee": 0.5 },
+      { "year": 5, "fee": 0 },
+      { "year": 6, "fee": 0 }
+    ],
+    "fees": {
+      "appraisalFeePercent": 0.1,
+      "appraisalFeeMin": 500000,
+      "appraisalFeeMax": 5000000,
+      "insuranceFeePercent": 0,
+      "notaryFeePercent": 0,
+      "registrationFee": 0,
+      "accountMaintenanceFee": 0,
+      "earlyRepaymentFeeMin": 500000,
+      "disbursementFee": 0,
+      "latePaymentPenalty": 150
+    },
+    "discountConditions": {
+      "salaryAccount": { "discount": 0.2, "description": "Nhan luong qua MB" },
+      "existingCustomer": { "discount": 0.1, "description": "Khach hang hien huu" },
+      "collateralAtBank": { "discount": 0, "description": "TSDB tai MB" },
+      "lifeInsurance": { "discount": 0.1, "description": "Mua bao hiem MB Ageas" },
+      "projectPartner": { "discount": 0.2, "description": "Mua nha du an lien ket" },
+      "youngCustomer": { "discount": 0, "description": "Khach hang tre" },
+      "civilServant": { "discount": 0.1, "description": "Cong chuc, vien chuc" },
+      "graceDiscount": { "discount": 0, "description": "Ap dung an han goc" },
+      "refinance": { "discount": 0, "description": "Tra no truoc han tu NH khac" },
+      "maxDiscount": 0.5
+    },
+    "collateralRequirements": {
+      "acceptFormedAsset": true,
+      "requiredDocuments": ["So do/So hong", "Hop dong mua ban", "CMND/CCCD", "Ho khau"],
+      "minCollateralRatio": 120,
+      "acceptedTypes": ["Can ho chung cu", "Nha o rieng le", "Dat o", "So tiet kiem"]
+    },
+    "incomeRequirements": {
+      "minDTI": 60,
+      "acceptedIncomeSources": ["Luong", "Kinh doanh", "Cho thue", "Dau tu"],
+      "minWorkExperience": 3,
+      "probationAccepted": true,
+      "contractTypes": ["Khong xac dinh thoi han", "Co thoi han >=6 thang"]
+    },
+    "processingTime": {
+      "approvalDays": 2,
+      "disbursementDays": 3,
+      "documentValidityDays": 30
+    },
+    "specialPrograms": [
+      {
+        "name": "MB DREAM HOME",
+        "description": "Goi vay mua nha uu dai",
+        "conditions": "Thu nhap tu 10 trieu/thang",
+        "benefits": "An han goc 5 nam hoac chi tra 15% goc trong 10 nam dau"
+      }
+    ],
+    "specialFeatures": ["Thu nhap tu 10 trieu", "LTV 80%", "Chi tra 15% goc trong 10 nam dau"],
+    "eligibility": "Moi doi tuong",
+    "notes": "Phe duyet nhanh trong 2h"
+  },
+  "vietinbank": {
+    "name": "VietinBank",
+    "logo": "VT",
+    "color": "#004B87",
+    "maxLoan": 5000000000,
+    "maxTerm": 35,
+    "minAge": 20,
+    "maxAge": 35,
+    "maxGraceYears": 3,
+    "minIncome": 0,
+    "ltvRatio": 70,
+    "interestRates": [
+      { "months": 6, "rate": 6.0 },
+      { "months": 12, "rate": 6.5 },
+      { "months": 24, "rate": 7.0 }
+    ],
+    "youngRates": [{ "months": 12, "rate": 5.6 }],
+    "floatingRate": 8.5,
+    "floatingFormula": "LS huy dong 12-13 thang + 3-4%",
+    "floatingBase": "Lai suat huy dong 12-13 thang",
+    "floatingSpread": 3.5,
+    "prepaymentFees": [
+      { "year": 1, "fee": 2 },
+      { "year": 2, "fee": 2 },
+      { "year": 3, "fee": 1.5 },
+      { "year": 4, "fee": 1 },
+      { "year": 5, "fee": 1 },
+      { "year": 6, "fee": 0 }
+    ],
+    "fees": {
+      "appraisalFeePercent": 0.1,
+      "appraisalFeeMin": 500000,
+      "appraisalFeeMax": 5000000,
+      "insuranceFeePercent": 0,
+      "notaryFeePercent": 0,
+      "registrationFee": 0,
+      "accountMaintenanceFee": 0,
+      "earlyRepaymentFeeMin": 500000,
+      "disbursementFee": 0,
+      "latePaymentPenalty": 150
+    },
+    "discountConditions": {
+      "salaryAccount": { "discount": 0.2, "description": "Nhan luong qua VietinBank" },
+      "existingCustomer": { "discount": 0.1, "description": "Khach hang hien huu" },
+      "collateralAtBank": { "discount": 0, "description": "TSDB tai VietinBank" },
+      "lifeInsurance": { "discount": 0.1, "description": "Mua bao hiem nhan tho" },
+      "projectPartner": { "discount": 0.2, "description": "Mua nha du an lien ket" },
+      "youngCustomer": { "discount": 0.3, "description": "Khach hang 20-35 tuoi (HomeJoy)" },
+      "civilServant": { "discount": 0.1, "description": "Cong chuc, vien chuc" },
+      "graceDiscount": { "discount": 0, "description": "Ap dung an han goc" },
+      "refinance": { "discount": 0, "description": "Tra no truoc han tu NH khac" },
+      "maxDiscount": 0.5
+    },
+    "collateralRequirements": {
+      "acceptFormedAsset": true,
+      "requiredDocuments": ["So do/So hong", "Hop dong mua ban", "CMND/CCCD", "Ho khau"],
+      "minCollateralRatio": 130,
+      "acceptedTypes": ["Can ho chung cu", "Nha o rieng le", "Dat o"]
+    },
+    "incomeRequirements": {
+      "minDTI": 50,
+      "acceptedIncomeSources": ["Luong", "Kinh doanh", "Cho thue"],
+      "minWorkExperience": 6,
+      "probationAccepted": false,
+      "contractTypes": ["Khong xac dinh thoi han", "Co thoi han >=12 thang"]
+    },
+    "processingTime": {
+      "approvalDays": 3,
+      "disbursementDays": 5,
+      "documentValidityDays": 30
+    },
+    "specialPrograms": [
+      {
+        "name": "HomeJoy",
+        "description": "Goi vay danh cho nguoi tre 20-35 tuoi",
+        "conditions": "Do tuoi 20-35",
+        "benefits": "Lai suat tu 5.6%/nam"
+      }
+    ],
+    "specialFeatures": ["Goi HomeJoy cho 20-35 tuoi", "Lai suat tu 5.6%"],
+    "eligibility": "Moi doi tuong, uu dai cho 20-35 tuoi",
+    "notes": ""
+  },
+  "vietcombank": {
+    "name": "Vietcombank",
+    "logo": "VC",
+    "color": "#00703C",
+    "maxLoan": 0,
+    "maxTerm": 40,
+    "minAge": 20,
+    "maxAge": 35,
+    "maxGraceYears": 5,
+    "minIncome": 0,
+    "ltvRatio": 70,
+    "interestRates": [
+      { "months": 6, "rate": 3.99 },
+      { "months": 9, "rate": 4.5 },
+      { "months": 12, "rate": 5.0 },
+      { "months": 18, "rate": 5.5 },
+      { "months": 24, "rate": 6.0 },
+      { "months": 36, "rate": 6.5 },
+      { "months": 60, "rate": 7.0 }
+    ],
+    "youngRates": [{ "months": 12, "rate": 5.2 }],
+    "floatingRate": 8.0,
+    "floatingFormula": "LS tiet kiem 12-13 thang + 3-4%",
+    "floatingBase": "Lai suat tiet kiem 12-13 thang VCB",
+    "floatingSpread": 3.5,
+    "prepaymentFees": [
+      { "year": 1, "fee": 1.5 },
+      { "year": 2, "fee": 1 },
+      { "year": 3, "fee": 1 },
+      { "year": 4, "fee": 0.5 },
+      { "year": 5, "fee": 0.5 },
+      { "year": 6, "fee": 0 }
+    ],
+    "fees": {
+      "appraisalFeePercent": 0.1,
+      "appraisalFeeMin": 500000,
+      "appraisalFeeMax": 3000000,
+      "insuranceFeePercent": 0,
+      "notaryFeePercent": 0,
+      "registrationFee": 0,
+      "accountMaintenanceFee": 0,
+      "earlyRepaymentFeeMin": 500000,
+      "disbursementFee": 0,
+      "latePaymentPenalty": 150
+    },
+    "discountConditions": {
+      "salaryAccount": { "discount": 0.2, "description": "Nhan luong qua VCB" },
+      "existingCustomer": { "discount": 0.1, "description": "Khach hang hien huu VCB" },
+      "collateralAtBank": { "discount": 0, "description": "TSDB tai VCB" },
+      "lifeInsurance": { "discount": 0.1, "description": "Mua bao hiem VCLI" },
+      "projectPartner": { "discount": 0.2, "description": "Mua nha du an lien ket" },
+      "youngCustomer": { "discount": 0.2, "description": "Khach hang 20-35 tuoi" },
+      "civilServant": { "discount": 0.1, "description": "Cong chuc, vien chuc" },
+      "graceDiscount": { "discount": 0, "description": "Ap dung an han goc" },
+      "refinance": { "discount": 0, "description": "Tra no truoc han tu NH khac" },
+      "maxDiscount": 0.5
+    },
+    "collateralRequirements": {
+      "acceptFormedAsset": true,
+      "requiredDocuments": ["So do/So hong", "Hop dong mua ban", "CMND/CCCD", "Ho khau", "Xac nhan thu nhap"],
+      "minCollateralRatio": 140,
+      "acceptedTypes": ["Can ho chung cu", "Nha o rieng le", "Dat o"]
+    },
+    "incomeRequirements": {
+      "minDTI": 50,
+      "acceptedIncomeSources": ["Luong", "Kinh doanh", "Cho thue"],
+      "minWorkExperience": 12,
+      "probationAccepted": false,
+      "contractTypes": ["Khong xac dinh thoi han"]
+    },
+    "processingTime": {
+      "approvalDays": 3,
+      "disbursementDays": 7,
+      "documentValidityDays": 30
+    },
+    "specialPrograms": [
+      {
+        "name": "Nha Moi Thanh Dat",
+        "description": "Danh cho nguoi tre 20-35 tuoi",
+        "conditions": "Do tuoi 20-35, moi loai BDS",
+        "benefits": "Lai suat tu 5.2%/nam, LTV 70%, an han goc 5 nam, thoi han 40 nam"
+      }
+    ],
+    "specialFeatures": ["Goi Nha Moi Thanh Dat", "Lai suat tu 3.99%", "Nhieu ky han co dinh"],
+    "eligibility": "Moi doi tuong, uu dai cho 20-35 tuoi",
+    "notes": "Ky han vay dai nhat thi truong (40 nam)"
+  },
+  "bidv": {
+    "name": "BIDV",
+    "logo": "BD",
+    "color": "#0066B3",
+    "maxLoan": 5000000000,
+    "maxTerm": 40,
+    "minAge": 18,
+    "maxAge": 35,
+    "maxGraceYears": 5,
+    "minIncome": 0,
+    "ltvRatio": 70,
+    "interestRates": [{ "months": 36, "rate": 5.5 }],
+    "floatingRate": 8.0,
+    "floatingFormula": "LS huy dong 24 thang + 3%",
+    "floatingBase": "Lai suat huy dong 24 thang BIDV",
+    "floatingSpread": 3.0,
+    "prepaymentFees": [
+      { "year": 1, "fee": 3 },
+      { "year": 2, "fee": 2.5 },
+      { "year": 3, "fee": 2 },
+      { "year": 4, "fee": 1.5 },
+      { "year": 5, "fee": 1 },
+      { "year": 6, "fee": 0 }
+    ],
+    "fees": {
+      "appraisalFeePercent": 0.1,
+      "appraisalFeeMin": 500000,
+      "appraisalFeeMax": 5000000,
+      "insuranceFeePercent": 0,
+      "notaryFeePercent": 0,
+      "registrationFee": 0,
+      "accountMaintenanceFee": 0,
+      "earlyRepaymentFeeMin": 500000,
+      "disbursementFee": 0,
+      "latePaymentPenalty": 150
+    },
+    "discountConditions": {
+      "salaryAccount": { "discount": 0.2, "description": "Nhan luong qua BIDV" },
+      "existingCustomer": { "discount": 0.1, "description": "Khach hang hien huu" },
+      "collateralAtBank": { "discount": 0, "description": "TSDB tai BIDV" },
+      "lifeInsurance": { "discount": 0.1, "description": "Mua bao hiem BIC" },
+      "projectPartner": { "discount": 0.2, "description": "Mua nha du an lien ket" },
+      "youngCustomer": { "discount": 0.3, "description": "Khach hang <=35 tuoi" },
+      "civilServant": { "discount": 0.1, "description": "Cong chuc, vien chuc" },
+      "graceDiscount": { "discount": 0, "description": "Ap dung an han goc" },
+      "refinance": { "discount": 0, "description": "Tra no truoc han tu NH khac" },
+      "maxDiscount": 0.5
+    },
+    "collateralRequirements": {
+      "acceptFormedAsset": true,
+      "requiredDocuments": ["So do/So hong", "Hop dong mua ban", "CMND/CCCD", "Ho khau"],
+      "minCollateralRatio": 130,
+      "acceptedTypes": ["Can ho chung cu", "Nha o rieng le", "Dat o", "Nha thue mua"]
+    },
+    "incomeRequirements": {
+      "minDTI": 50,
+      "acceptedIncomeSources": ["Luong", "Kinh doanh", "Cho thue"],
+      "minWorkExperience": 6,
+      "probationAccepted": false,
+      "contractTypes": ["Khong xac dinh thoi han", "Co thoi han >=12 thang"]
+    },
+    "processingTime": {
+      "approvalDays": 3,
+      "disbursementDays": 5,
+      "documentValidityDays": 30
+    },
+    "specialPrograms": [
+      {
+        "name": "Vay mua nha cho nguoi tre",
+        "description": "Danh cho khach hang den 35 tuoi",
+        "conditions": "Mua/thue mua nha tren toan quoc",
+        "benefits": "Lai suat 5.5%/nam co dinh 3 nam, an han goc 5 nam, han muc 5 ty"
+      }
+    ],
+    "specialFeatures": ["Co dinh 5.5% trong 3 nam", "An han goc 5 nam", "Danh cho <=35 tuoi"],
+    "eligibility": "Khach hang <=35 tuoi",
+    "notes": ""
+  },
+  "woori": {
+    "name": "Woori Bank",
+    "logo": "WR",
+    "color": "#0072BC",
+    "maxLoan": 5000000000,
+    "maxTerm": 30,
+    "minAge": 18,
+    "maxAge": 65,
+    "maxGraceYears": 2,
+    "minIncome": 0,
+    "ltvRatio": 70,
+    "interestRates": [
+      { "months": 12, "rate": 5.6 },
+      { "months": 24, "rate": 6.0 },
+      { "months": 36, "rate": 6.2 }
+    ],
+    "floatingRate": 8.5,
+    "floatingFormula": "Binh quan LS tien gui 12 thang NH quoc doanh + 4%",
+    "floatingBase": "Binh quan LS tien gui 12 thang (VCB, BIDV, VietinBank, Agribank)",
+    "floatingSpread": 4.0,
+    "prepaymentFees": [
+      { "year": 1, "fee": 3 },
+      { "year": 2, "fee": 2 },
+      { "year": 3, "fee": 1 },
+      { "year": 4, "fee": 0.5 },
+      { "year": 5, "fee": 0 },
+      { "year": 6, "fee": 0 }
+    ],
+    "fees": {
+      "appraisalFeePercent": 0.15,
+      "appraisalFeeMin": 1000000,
+      "appraisalFeeMax": 8000000,
+      "insuranceFeePercent": 0,
+      "notaryFeePercent": 0,
+      "registrationFee": 0,
+      "accountMaintenanceFee": 0,
+      "earlyRepaymentFeeMin": 500000,
+      "disbursementFee": 0,
+      "latePaymentPenalty": 150
+    },
+    "discountConditions": {
+      "salaryAccount": { "discount": 0.1, "description": "Nhan luong qua Woori" },
+      "existingCustomer": { "discount": 0.1, "description": "Khach hang hien huu" },
+      "collateralAtBank": { "discount": 0, "description": "TSDB tai Woori" },
+      "lifeInsurance": { "discount": 0, "description": "Mua bao hiem" },
+      "projectPartner": { "discount": 0.2, "description": "Mua nha du an lien ket" },
+      "youngCustomer": { "discount": 0, "description": "Khach hang tre" },
+      "civilServant": { "discount": 0, "description": "Cong chuc, vien chuc" },
+      "graceDiscount": { "discount": 0, "description": "Ap dung an han goc" },
+      "refinance": { "discount": 0, "description": "Tra no truoc han tu NH khac" },
+      "maxDiscount": 0.4
+    },
+    "collateralRequirements": {
+      "acceptFormedAsset": true,
+      "requiredDocuments": ["So do/So hong", "Hop dong mua ban", "CMND/CCCD", "Ho khau"],
+      "minCollateralRatio": 130,
+      "acceptedTypes": ["Can ho chung cu", "Nha o rieng le", "Dat o"]
+    },
+    "incomeRequirements": {
+      "minDTI": 50,
+      "acceptedIncomeSources": ["Luong", "Kinh doanh"],
+      "minWorkExperience": 6,
+      "probationAccepted": false,
+      "contractTypes": ["Khong xac dinh thoi han", "Co thoi han >=12 thang"]
+    },
+    "processingTime": {
+      "approvalDays": 2,
+      "disbursementDays": 5,
+      "documentValidityDays": 30
+    },
+    "specialPrograms": [],
+    "specialFeatures": ["Lai suat canh tranh", "Thu tuc nhanh"],
+    "eligibility": "Moi doi tuong",
+    "notes": ""
+  }
+}
